@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Absensi</title>
+    <style>
+        #table-data thead {
+            background-color: lightblue;
+            color: #333;
+            font-weight: bold;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            padding: 0% auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" id="table-data">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Nim</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for i in range(datas['nama']|length) %}
+            <tr>
+                <td>{{ datas['nama'][i] }}</td>
+                <td>{{ datas['nim'][i] }}</td>
+                <td>{{ datas['date'][i] }}</td>
+                <td>{{ datas['time'][i] }}</td>
+                <td>{{ datas['role'][i] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
